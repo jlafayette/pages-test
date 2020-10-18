@@ -58,16 +58,16 @@ update msg model =
 view : Model -> Html Msg
 view model =
     Element.layout [] <|
-        column
+        row
             [ width fill
             , height fill
-            , spacingXY 0 2
+            , spacingXY 5 2
             ]
-            [ el
+            [ decrementButton
+            , el
                 [ centerX, centerY ]
-                (text ("Hello from elm  " ++ String.fromInt model))
+                (text (String.fromInt model))
             , incrementButton
-            , decrementButton
             ]
 
 
